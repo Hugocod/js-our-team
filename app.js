@@ -21,3 +21,19 @@ const listMembers = [
 ];
 
 console.log(listMembers);
+
+/* prendo un elemento in cui inserire le card che andrò a generare */
+let root = document.getElementById("wrapper");
+
+/* attraverso l'array e interpolo i dati degli oggetti con index che varia */
+for (let index = 0; index < listMembers.length; index++) {
+    root.innerHTML += ` 
+    <div class="card">
+    <figure>
+        <img src="img/${listMembers[index].picture}" alt="Elephant at sunset" />
+        <figcaption>${listMembers[index].name}</figcaption>
+        <figcaption>${listMembers[index].role}</figcaption>
+    </figure>
+    </div>
+    `;
+}
