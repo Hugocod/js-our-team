@@ -2,13 +2,57 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-family: "Prompt", sans-serif;
 }
 
 #wrapper {
     display: flex;
     flex-wrap: wrap;
+
+    width: 80%;
+    margin: 40px auto;
 }
 
 .card {
     width: calc(100% / 3);
+}
+
+img {
+    width: 100%;
+}
+
+.name {
+    font-size: 1.7rem;
+}
+.role {
+    font-size: 0.9rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+h1 {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 4rem;
+}
+
+figcaption {
+    margin: 5px 0px;
+}
+
+@media only screen and (max-width: 800px) {
+    .card {
+        width: calc(100% / 2);
+    }
+
+    .name {
+        font-size: 1.3rem;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .card {
+        width: 100%;
+    }
 }

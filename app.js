@@ -9,9 +9,9 @@ class TeamMember {
     }
 }
 
-/* creo gli oggetti passando i parametri corretti nel costruttore  */
+/* creo l'array in cui inserire gli oggetti */
 const listMembers = [
-    /* another */
+    /* creo gli oggetti passando i parametri corretti nel costruttore  */
     new TeamMember("Wayne Barnett", "Founder & CEO", "wayne-barnett-founder-ceo.jpg"),
     new TeamMember("Angela Caroll", "Chief Editor", "angela-caroll-chief-editor.jpg"),
     new TeamMember("Walter Gordon", "Office Manager", "walter-gordon-office-manager.jpg"),
@@ -31,9 +31,15 @@ for (let index = 0; index < listMembers.length; index++) {
     <div class="card">
     <figure>
         <img src="img/${listMembers[index].picture}" alt="Elephant at sunset" />
-        <figcaption>${listMembers[index].name}</figcaption>
-        <figcaption>${listMembers[index].role}</figcaption>
+        <figcaption class='name'>${listMembers[index].name}</figcaption>
+        <figcaption class='role'>${listMembers[index].role}</figcaption>
     </figure>
     </div>
     `;
+
+    /*    Stampo anche in console  */
+    console.log(listMembers[index].picture);
+    console.log(listMembers[index].name);
+    console.log(listMembers[index].role);
+    console.log("_________________________");
 }
