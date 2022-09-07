@@ -78,21 +78,3 @@ figcaption {
         width: 100%;
     }
 }
-
-.card0,
-.card1,
-.card2,
-.card3,
-.card4,
-.card5 {
-    filter: grayscale(1);
-}
-
-.card0:hover,
-.card1:hover,
-.card2:hover,
-.card3:hover,
-.card4:hover,
-.card5:hover {
-    filter: grayscale(0);
-}
