@@ -15,8 +15,17 @@ body {
     margin: 40px auto;
 }
 
-.card {
+.card0,
+.card1,
+.card2,
+.card3,
+.card4,
+.card5 {
     width: calc(100% / 3);
+
+    transition: all ease-in-out 1s;
+    opacity: 0;
+    transform: scale(0.8);
 }
 
 img {
@@ -43,7 +52,12 @@ figcaption {
 }
 
 @media only screen and (max-width: 800px) {
-    .card {
+    .card0,
+    .card1,
+    .card2,
+    .card3,
+    .card4,
+    .card5 {
         width: calc(100% / 2);
     }
 
@@ -52,7 +66,30 @@ figcaption {
     }
 }
 @media only screen and (max-width: 500px) {
-    .card {
+    .card0,
+    .card1,
+    .card2,
+    .card3,
+    .card4,
+    .card5 {
         width: 100%;
     }
+}
+
+.card0,
+.card1,
+.card2,
+.card3,
+.card4,
+.card5 {
+    filter: grayscale(1);
+}
+
+.card0:hover,
+.card1:hover,
+.card2:hover,
+.card3:hover,
+.card4:hover,
+.card5:hover {
+    filter: grayscale(0);
 }

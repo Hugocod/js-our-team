@@ -28,14 +28,19 @@ let root = document.getElementById("wrapper");
 /* attraverso l'array e interpolo i dati degli oggetti con index che varia */
 for (let index = 0; index < listMembers.length; index++) {
     root.innerHTML += ` 
-    <div class="card">
-    <figure>
-        <img src="img/${listMembers[index].picture}" alt="Elephant at sunset" />
-        <figcaption class='name'>${listMembers[index].name}</figcaption>
-        <figcaption class='role'>${listMembers[index].role}</figcaption>
-    </figure>
-    </div>
-    `;
+        <div class="card${index}">
+        <figure>
+            <img src="img/${listMembers[index].picture}" alt="Elephant at sunset" />
+            <figcaption class='name'>${listMembers[index].name}</figcaption>
+            <figcaption class='role'>${listMembers[index].role}</figcaption>
+        </figure>
+        </div>
+        `;
+
+    setTimeout(() => {
+        document.querySelector(`.card${index}`).style.opacity = "100";
+        document.querySelector(`.card${index}`).style.transform = "scale(1)";
+    }, 200 * index);
 
     /*    Stampo anche in console  */
     console.log(listMembers[index].picture);
